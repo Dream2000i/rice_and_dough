@@ -1,0 +1,57 @@
+{
+    "site": {
+        "on": true,
+        "mode": "dev"
+    },
+    "slider": {
+        "on": false,
+        "timeUpdate": 123
+    },
+    "synch": {
+        "full": {
+            "img": true
+        }
+    },
+    "ordersToTelegramm": {
+        "on": true,
+        "contaktList": [
+            "5137535569",
+            "5127466652",
+            "431799727"
+        ]
+    },
+    "work": {
+        "day": {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0,
+            "4": 0,
+            "5": 1,
+            "6": 1
+        },
+        "time": [
+            "c 12:00 до 22:00",
+            "c 12:00 до 23:00"
+        ]
+    },
+    "contakts": {
+        "adress": "",
+        "phone": 580600
+    },
+    "happyHours": {
+        "startH": 14,
+        "endH": 18,
+        "startD": 1,
+        "endD": 4,
+        "discount": 10,
+        "value": "%",
+        "active": true
+    },
+    "ya_metrika": {
+        "on": true,
+        "id": [
+            88611290
+        ]
+    }
+}
