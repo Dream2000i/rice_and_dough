@@ -1,0 +1,252 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.button_orange {
+  background: black;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  padding: 18px;
+  color: white;
+  font-size: 16px;
+  text-transform: uppercase;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  border-radius: 30px;
+  border: none;
+}
+
+.button_orange:hover {
+  cursor: pointer;
+  background: gray;
+}
+
+span.error {
+  white-space: nowrap;
+  overflow: hidden;
+  color: red;
+  visibility: hidden;
+}
+
+.counter {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  gap: 10px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.counter > span {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  height: 28px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.counter .minus,
+.counter .plus {
+  cursor: pointer;
+  background-color: black;
+  border-radius: 60px;
+  width: 28px;
+  position: relative;
+}
+
+.counter .minus:hover,
+.counter .plus:hover {
+  background-color: gray;
+}
+
+.counter .minus > span,
+.counter .plus > span,
+.counter .plus::after {
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background-color: white;
+  content: "";
+}
+
+.counter .plus > span {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+}
+
+.button_remove {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: relative;
+  height: 28px;
+  width: 28px;
+  border-radius: 60px;
+  border: solid 1px silver;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.button_remove::after,
+.button_remove span {
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  background-color: silver;
+  content: "";
+}
+
+.button_remove span {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.button_remove::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.button_remove:hover {
+  border-color: gray;
+}
+
+.button_remove:hover::after,
+.button_remove:hover span {
+  background-color: gray;
+}
+
+.cart_button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  gap: 5px;
+  color: white;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+
+@media screen and (max-width: 600px) {
+  .cart_button {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    -webkit-box-shadow: 0px 5px 15px black;
+            box-shadow: 0px 5px 15px black;
+    z-index: 10;
+    border: solid 1px #676161;
+  }
+}
+
+.cart_button path {
+  stroke: white;
+}
+
+.cart_button.activeCart {
+  background-color: yellow;
+  -webkit-transition: all 0ms !important;
+  transition: all 0ms !important;
+}
+
+li.marker_li {
+  margin: 5px;
+  padding: 5px;
+  border: solid black 1px;
+  border-radius: 30px;
+}
+
+li.marker_li:hover {
+  color: gray;
+  cursor: pointer;
+}
+
+li.marker_li.active {
+  color: white;
+  background-color: black;
+}
+
+li.marker_li.active .marker span {
+  background-color: black;
+}
+
+li.marker_li .marker {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  margin: auto;
+  margin-right: 5px;
+  border-radius: 60px;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+li.marker_li .marker.multi span {
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  height: 1px;
+  width: 7px;
+  position: absolute;
+}
+
+li.marker_li .marker.multi span:nth-child(1) {
+  right: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+li.marker_li .marker.multi span:nth-child(2) {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+li.marker_li .marker.one {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+li.marker_li .marker.one span:nth-child(1) {
+  margin: 0px;
+  padding: 0px;
+  display: block;
+  position: absolute;
+  height: 6px;
+  width: 6px;
+  border-radius: 60px;
+}
+
+li.marker_li .marker.one span:nth-child(2) {
+  display: none;
+  position: absolute;
+}
+/*# sourceMappingURL=UI.css.map */

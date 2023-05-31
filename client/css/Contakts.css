@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.contankt_page {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto 2fr;
+      grid-template-rows: auto auto 2fr;
+}
+
+#contakt_content {
+  text-align: center;
+}
+
+#contakt_content a {
+  color: blue;
+}
+
+#map {
+  bottom: 0;
+  overflow: hidden;
+}
+/*# sourceMappingURL=Contakts.css.map */

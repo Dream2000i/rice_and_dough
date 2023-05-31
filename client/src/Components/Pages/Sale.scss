@@ -1,0 +1,25 @@
+.sale {
+    display: flex;
+    gap:20px;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin: auto;
+    margin-top: 20px;
+
+    >* {
+        max-width: 100%;
+    }
+    h3 {
+        text-align: center;
+        font-size: 20px;
+    }
+    img {
+        // cursor: handler;
+        max-width: 500px;
+        max-width: 100%;
+
+        border-radius: 60px;
+
+    }
+}

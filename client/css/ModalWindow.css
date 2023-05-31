@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+.modal_background {
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.5);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 15;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal_background .modal_window {
+  background-color: white;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  overflow-y: hidden;
+}
+
+.modal_background .modal_window:not(.touchMove) {
+  -webkit-transition: all 1.2s;
+  transition: all 1.2s;
+}
+
+.modal_background .modal_window .modal_close {
+  width: 100%;
+}
+
+.modal_background .modal_window .modal_close button {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  border: none;
+  background-color: white;
+  border-radius: 60px;
+  padding: 0px;
+  font-size: 0px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  cursor: pointer;
+}
+
+.modal_background .modal_window .modal_close button span {
+  display: block;
+  height: 2px;
+  width: 21px;
+  position: absolute;
+  background-color: black;
+}
+
+.modal_background .modal_window .modal_close button span:nth-child(1) {
+  right: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+}
+
+.modal_background .modal_window .modal_close button span:nth-child(2) {
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.modal_background .modal_window .modal_content {
+  overflow-y: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: calc(100% - 35px);
+}
+
+.modal_background .modal_window .modal_content .header_page {
+  font-family: "Noto Sans", sans-serif;
+  font-size: 25px;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.modal_background .modal_window .modal_content .page_text_content {
+  font-family: "Open Sans", sans-serif;
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.modal_background .modal_window .modal_content .empty_content {
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  font-size: 30px;
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  text-align: center;
+}
+
+.modal_background.enter-active, .modal_background.exit {
+  opacity: 1;
+}
+
+.modal_background.exit-active, .modal_background.enter {
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+  transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+}
+
+.modal_background.exit-active .modal_window, .modal_background.enter .modal_window {
+  margin-top: 210vh !important;
+}
+
+@media screen and (min-width: 700px) {
+  .modal_background .modal_window {
+    width: 900px;
+    height: 650px;
+    max-height: 90%;
+    max-width: 90%;
+    border-radius: 50px;
+  }
+  .modal_background .modal_window .modal_close button span:nth-child(1) {
+    right: initial;
+  }
+  .modal_background .modal_window .modal_close button span:nth-child(2) {
+    left: initial;
+  }
+  .modal_background .modal_window .modal_content .header_page {
+    font-size: 30px;
+  }
+  .modal_background .modal_window .modal_content .page_text_content {
+    font-size: 18px;
+    line-height: 30px;
+    max-width: 700px;
+    margin: auto;
+  }
+  .modal_background.off {
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+    transition: visibility 0s linear 0.5s, opacity 0.5s linear;
+  }
+  .modal_background.enter-active, .modal_background.exit {
+    width: 100%;
+    height: 100%;
+  }
+}
+/*# sourceMappingURL=ModalWindow.css.map */

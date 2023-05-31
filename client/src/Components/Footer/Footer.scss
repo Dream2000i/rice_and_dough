@@ -1,0 +1,22 @@
+.footer {
+    background-color: silver;
+    min-height: 100px;
+    width: 100%;
+
+    .footer_content {
+        color: white;
+        padding: 15px 0px;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        box-sizing: border-box;
+        justify-content: space-between;
+        align-items: center;
+
+        ul.menu_site {
+            display: flex;
+            gap: 10px;
+            justify-content: space-between;
+        }
+    }
+}

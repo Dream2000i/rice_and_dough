@@ -1,0 +1,111 @@
+.slider {
+    height: max-content;
+    // border: solid 1px black;
+    width: 100%;
+    display: flex;
+    // justify-content: center;
+    overflow: hidden;
+    min-height: 200px;
+    max-height: 500px;
+    // height: 495px;
+    // min-height: 200px;
+    // max-width: 100%;
+    position: relative;
+    a {
+        height: max-content;
+        // border: solid 1px black;
+        width: 100%;
+        display: flex;
+        // justify-content: center;
+        overflow: hidden;
+        min-height: 200px;
+    }
+    .slider-img {
+        width: 100%;
+        min-height: 100%;
+        overflow: hidden;
+
+        // position: absolute;
+        // width: 100%;
+        // height: 100%;
+
+        transition: all 3.2s;
+    }
+    .active img {
+        // object-fit: cover;
+        // width: 100%;
+        // height: 100%;
+    }
+    .slider-img-prev {
+        // transform: translateX(-100%);
+        // width: 0px;
+        // overflow: hidden;
+    }
+
+    .slider-img-next {
+        // transform: translateX(100%);
+        // width: 0px;
+        // overflow: hidden;
+    }
+
+    img {
+        max-height: 500px;
+        // object-fit: cover;
+        max-width: 100%;
+        object-fit: cover;
+        // transition: all 3.2s;
+    }
+
+    img.active {
+        width: 100%;
+    }
+    img.prev {
+        min-height: 200px;
+        position: absolute;
+        margin-left: 5000px;
+        opacity: 0;
+        transition: all 2.5s;
+    }
+    img.next {
+        opacity: 0;
+        min-height: 200px;
+        position: absolute;
+        margin-left: -5000px;
+        transition: all 2.5s;
+    }
+    img.none {
+        display: none;
+    }
+
+    .banner_content {
+        // text-align: center;
+        z-index: 2;
+        // height: 100%;
+        bottom: 0;
+        width: 100%;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+
+        span {
+            display: inline-block;
+            margin: 10px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            width: 10px;
+            height: 10px;
+            background-color: #f37d01;
+            border-radius: 60px;
+            box-shadow: 0px 5px 15px black;
+            &.active {
+                background-color:silver;
+            }
+        }
+
+        .container {
+            height: initial;
+            margin: initial;
+        }
+    }
+}

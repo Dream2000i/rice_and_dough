@@ -1,0 +1,31 @@
+@import "~/src/styles/variable.scss";
+
+.contakt_block {
+    background-color: #f2f2f2;
+    .content {
+        display: flex;
+        gap:5px;
+        padding: 5px 0px;
+        justify-content: space-evenly;
+        font-family: $montserrat;
+        white-space: nowrap;
+        font-size: 16px;
+        font-weight: 700;
+        @media screen and (max-width: 750px) {
+            font-size: 14px;
+            font-weight: 400;
+        }
+        @media screen and (max-width: 620px) {
+            .time span, .adress span, .work span {
+                display: none;
+            }
+        }
+        @media screen and (max-width: 480px) {
+
+            .time,.adress {
+                display: none;
+            }
+
+        }
+    }
+}

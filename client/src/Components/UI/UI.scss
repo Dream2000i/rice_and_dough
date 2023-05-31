@@ -1,0 +1,205 @@
+@import "../../styles/variable.scss";
+
+
+
+.button_orange {
+    background: $cOrange;
+    font-family: $montserrat;
+    font-weight: 900;
+    padding: 18px;
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all 300ms ease-in-out;
+    border-radius: 30px;
+    // box-shadow: 0px 5px 15px black;
+    border: none;
+    &:hover {
+        cursor: pointer;
+        background: $cOrangeHover;
+        // transition: all 300ms ease-in-out;
+    }
+}
+
+span.error {
+    white-space: nowrap;
+    overflow: hidden;
+    color: red;
+    visibility: hidden;
+}
+.counter {
+    display: inline-flex;
+    gap: 10px;
+    width: max-content;
+    > span {
+        display: inline-flex;
+        height: 28px;
+        align-items: center;
+        justify-content: center;
+    }
+    .minus,
+    .plus {
+        cursor: pointer;
+        background-color: $cOrange;
+        border-radius: 60px;
+        width: 28px;
+        position: relative;
+        &:hover {
+            background-color: $cOrangeHover;
+        }
+    }
+
+    .minus > span,
+    .plus > span,
+    .plus::after {
+        position: absolute;
+        width: 50%;
+        height: 2px;
+        background-color: white;
+        content: "";
+    }
+
+    .plus {
+        > span {
+            transform: rotate(90deg);
+        }
+    }
+}
+
+.button_remove {
+    display: inline-flex;
+    position: relative;
+    height: 28px;
+    width: 28px;
+    border-radius: 60px;
+    border: solid 1px silver;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &::after,
+    span {
+        position: absolute;
+        height: 2px;
+        width: 50%;
+        background-color: silver;
+        content: "";
+    }
+    span {
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+    &:hover {
+        // background-color: silver;
+        border-color: gray;
+        &::after,
+        span {
+            background-color: gray;
+        }
+    }
+}
+
+
+.cart_button {
+    // @include linksite;
+
+
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    gap:5px;
+    color:white;
+    width: max-content;
+    height: fit-content;
+    
+    @media screen and (max-width: 600px) {
+        position: fixed;
+        bottom: 15px;
+        left:15px;
+        box-shadow: 0px 5px 15px black;
+        z-index: 10;
+        border:solid 1px #676161;
+        
+       
+    }
+    path {
+        stroke: white;
+    }
+    &.activeCart {
+        // box-shadow: 0px 0px 20px 15px #fbff07;
+        background-color: yellow;
+        transition: all 0ms !important;
+    }
+    
+}
+
+
+li.marker_li {
+    margin: 5px;
+    padding: 5px;
+    border: solid $cOrange 1px;
+    border-radius: 30px;
+    &:hover {
+        color: $cOrangeHover;
+        cursor: pointer;
+    }
+    &.active {
+        color: white;
+        background-color: $cOrange;
+        .marker {
+            span {
+                background-color: black;
+            }
+        }
+    }
+    .marker {
+        display: inline-flex;
+        width: 12px;
+        height: 12px;
+        background-color: white;
+        margin: auto;
+        margin-right: 5px;
+        border-radius: 60px;
+        position: relative;
+        justify-content: center;
+        align-items: center;
+        &.multi {
+            span {
+                margin: 0px;
+                padding: 0px;
+                display: block;
+                height: 1px;
+                width: 7px;
+                position: absolute;
+                &:nth-child(1) {
+                    right: 0;
+                    transform: rotate(-45deg);
+                }
+                &:nth-child(2) {
+                    left: 0;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+
+        &.one {
+            justify-content: center;
+            align-items: center;
+            span:nth-child(1) {
+                margin: 0px;
+                padding: 0px;
+                display: block;
+                position: absolute;
+
+                height: 6px;
+                width: 6px;
+                border-radius: 60px;
+            }
+            span:nth-child(2) {
+                display: none;
+                position: absolute;
+            }
+        }
+    }
+}

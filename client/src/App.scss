@@ -1,0 +1,56 @@
+@import "./styles/zero.scss";
+@import "./styles/variable.scss";
+
+html,body,#root,.wrapper {
+    // height: 100%;
+}
+
+body {
+    // overflow: hidden;
+    background-color: silver;
+}
+.wrapper {
+
+    font-family: sans-serif;
+    // background-color: #f37d01;
+    color: #2e2e30;
+    main.main {
+        background-color: white;
+    }
+    .container {
+        padding: $docPadding;
+        box-sizing: border-box;
+        max-width: $maxSize;
+        margin: auto;
+        height: 100%;
+        position: relative;
+        // background-color: white;
+    }
+    display: grid;
+    grid-template-rows:auto minmax(70px, auto) max-content auto 1fr 100px;
+    grid-template-columns:100%;
+}
+img {
+    max-width: 100%;
+    display: block;
+}
+a {
+    font-size: inherit;
+    color: inherit;
+    text-decoration: none;
+}
+
+.hhours {
+    .ant-modal-title {
+        font-size: 20px;
+        text-transform: uppercase;
+        font-weight: 800;
+        text-align: center;
+    }
+    .ant-modal-close {
+        display: none;
+    }
+    .ant-modal-footer {
+        text-align: center;
+    }
+}

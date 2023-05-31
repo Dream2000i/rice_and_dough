@@ -1,0 +1,135 @@
+@import "../../styles/variable.scss";
+
+.goodsOptions {
+    display: grid;
+    grid-gap: 15px;
+
+    grid-template-rows: max-content;
+    grid-template-areas:
+        "h h"
+        "i i"
+        "p p"
+        "c tc"
+        "o o"
+        "s s";
+       
+
+   
+
+    .product_header {
+        grid-area: h;
+        font-family: "Noto Sans", sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+        text-align: center;
+    }
+    .price {
+        grid-area: p;
+        text-align: center;
+        font-family: "Noto Sans", sans-serif;
+        font-size: 20px;
+        font-weight: 800;
+        text-transform: uppercase;
+        display: grid;
+        justify-content: center;
+        align-content: center;
+    }
+    .count {
+        grid-area: c;
+        justify-self: center;
+        align-self: center;
+    }
+    .to_cart {
+        grid-area: tc;
+        width: max-content;
+        height: max-content;
+        // text-align: center;
+        // display: grid;
+        justify-self: center;
+        align-self: center;
+        div {
+            // padding: 5px;
+
+            // font-size: 14px;
+
+            // @include linksite;
+        }
+    }
+    .product_img {
+        grid-area: i;
+        max-height: 100%;
+        width: 100%;
+        // width: 300px;
+        // height: 300px;
+        img {
+            
+            width: 100%;
+                height: 90vw;
+            object-fit: cover;
+            border-radius: 60px;
+            max-width: 400px;
+            max-height: 400px;
+            margin: auto;
+        }
+    }
+    .to_cart_image {
+        position: absolute;
+        width: 20px;
+        top: 0;
+        right: 0px;
+        object-fit: contain;
+        transition: all 0.5s;
+    }
+    .product_weight {
+        grid-area: w;
+    }
+
+    .structure {
+        grid-area: s;
+        text-align: justify;
+        font-family: "Montserrat", sans-serif;
+        color: #979797;
+        line-height: 20px;
+    }
+    .options {
+        grid-area: o;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        .option {
+            min-width: 150px;
+            // line-height: 20px;
+
+            h4 {
+                line-height: 30px;
+
+                font-family: "Noto Sans", sans-serif;
+                font-size: 18px;
+                text-align: center;
+            }
+            font-family: "Montserrat", sans-serif;
+        }
+    }
+    @media screen and (min-width: 700px) {
+        grid-template-areas:
+            "i h h h"
+            "i p c tc"
+            "i o o o"
+            "i s s s";
+
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: max-content max-content max-content 1fr;
+        .product_heade {
+            grid-gap: 20px;
+        }
+
+        .product_img {
+            img {
+                width: 100%;
+                height: 400px;
+            }
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.active {
+    color: red;
+}
+
+.header_menu {
+    .menu_site {
+        display: flex;
+        justify-content: space-around;
+        gap: 5px;
+        padding: 0px;
+        width: 100%;
+        li {
+            list-style-type: none;
+        }
+    }
+}
+.ant-table-content {
+    overflow-x: auto;
+}

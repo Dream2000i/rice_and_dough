@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans&family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
+$maxSize: 1280px;
+$notoSans: "Noto Sans", sans-serif;
+$openSans: "Open Sans", sans-serif;
+$montserrat: "Montserrat", sans-serif;
+$docPadding: 0px 15px;
+$cOrange: black;
+// $cOrange: #f37d01;
+// $cOrangeHover:#f34401;
+$cOrangeHover: gray;
+// $cOrangeHover: orange;
+
+@mixin linksite {
+    background: $cOrange;
+    font-weight: 900;
+    padding: 18px;
+
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    transition: all 300ms ease-in-out;
+    border-radius: 30px;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    &:hover {
+        cursor: pointer;
+        background: $cOrangeHover;
+        transition: all 300ms ease-in-out;
+    }
+    // @media screen and (max-width: 600px) {
+    //     font-size: 14px;
+    //     padding: 14px;
+    // }
+    //     @media screen and (max-width: 400px) {
+    //         font-size: 9px;
+    //         padding: 8px;
+    //     }
+    // }
+}
+
+@mixin cartheader {
+    font-family: "Noto Sans", sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: uppercase;
+    @media screen and (max-width: 700px) {
+        font-size: 16px;
+    }
+}
